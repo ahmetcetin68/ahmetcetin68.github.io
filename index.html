@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ahmet Çetin</title>
+	<link rel="stylesheet"  href="stil.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+.mySlides {display:none;}
+	</style>
+</head>	
+<body>
+	<div class="sablon">
+		<div class="menu">
+			<ul>
+				<li><a href="">Anasayfa</a></li>
+				<li><a href="index.html" target="_blank">Hakkımda</a></li>
+				<li><a href="">İletişim</a></li>
+			</ul>
+		</div>
+		<div class="orta1">
+			<div class="w3-content w3-display-container">
+			  <img class="mySlides" src="images/slider4.jpg" style="width:100%">
+			  <img class="mySlides" src="images/slider2.jpg" style="width:100%">
+			  <img class="mySlides" src="images/slider3.jpg" style="width:100%">
+			  <img class="mySlides" src="images/slider.jpg" style="width:100%">
+
+			  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+			  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="hakkimizda">
+			<h2>Hakkımda</h2>
+			<p>Adım Ahmet Çetin.İstanbulda yaşıyorum.Yazılım ile lise yıllarımda tanıştım.Şimdi Eskişehir Osmangazi Üniversitesinde Bilgisayar Programcılığı okumaktayım.Eğitimim dışında fotoğrafçılık yapıyorum.</p>
+		</div>
+		<div class="iletisim">
+		  <form>
+		    <label for="fname">Adınız</label>
+		    <input type="text" id="ad" name="adı" placeholder="Adınız..">
+
+		    <label for="lname">Soyadınız</label>
+		    <input type="text" id="sad" name="soyadı" placeholder="Soyadınız..">
+
+		    <label for="ulke">Ülke</label>
+		    <select id="ulke" name="country">
+		      <option value="Tr">Türkiye</option>
+		      <option value="kanada">Kanada</option>
+		      <option value="fr">Fransa</option>
+			  <option value="hol">Hollanda</option>
+			  <option value="ing">İngiltere</option>
+		    </select>
+
+		    <label for="subject">Mesaj</label>
+		    <textarea id="mesaj" name="mesaj" placeholder="Mesajınız..." style="height:200px"></textarea>
+
+		    <input type="submit" value="GÖNDER">
+		  </form>
+		</div>
+		<div class="footer">
+			<div class="yazi">Tüm Hakları Saklıdır. Ahmet Çetin 2020.</div>
+			<div class="sosyal">
+				<a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-logo.png" width="47" height="47"> </a>
+				<a href="https://www.instagram.com/ahmetcet.34/" target="_blank"><img src="images/instagram-logo-02.png" width="47" height="47"></a>
+				<a href="https://www.github.com//" target="_blank"><img src="images/github-logo-.png" width="47" height="47" ></a>
+			</div>
+		</div>
+	</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
